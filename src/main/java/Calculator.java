@@ -70,7 +70,7 @@ class Calculator {
 
         String binary = "";
         while (n > 0) {
-            binary += (n % 2 == 0) ? "0" : "1";
+            binary = ((n % 2 == 0) ? "0" : "1") + binary;
             n /= 2;
         }
         return binary;
