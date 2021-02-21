@@ -64,7 +64,16 @@ class Calculator {
     if int a = 16 then this method returns: 10000
      */
     String intToBinaryNumber(int n){
-        return null;
+        if (n == 0) {
+            return "0";
+        }
+
+        String binary = "";
+        while (n > 0) {
+            binary += (n % 2 == 0) ? "0" : "1";
+            n /= 2;
+        }
+        return binary;
     }
 
     /*
